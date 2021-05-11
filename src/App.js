@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import CharacterGrid from './components/CharacterGrid';
+import axios from 'axios';
+import Search from './components/Search'
 
 function App() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [query, setQuery] = useState('all');
+
+  useEffect(() => {
+    let fetchData = async () => {
+      let data = await axios.get(`https://got-api-vinu.herokuapp.com/api/got/?name=${query}`);
+      setData(data.data);
+      setLoading(false);
+    };
+    fetchData();
+  }, [query]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header></Header>
+      <Search search={(q) => setQuery(q)}></Search>
+      <CharacterGrid datas={data} isLoading={loading}></CharacterGrid>
     </div>
   );
 }
