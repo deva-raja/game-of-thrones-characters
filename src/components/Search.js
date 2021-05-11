@@ -9,7 +9,6 @@ function Search({ search }) {
   }
   return (
     <section className='search'>
-      <form>
         <input
           type='text'
           placeholder='Search characters'
@@ -17,7 +16,6 @@ function Search({ search }) {
           value={value}
           onChange={(e) => onChange(e.target.value)}
         />
-      </form>
     </section>
   );
 }
