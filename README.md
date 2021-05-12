@@ -5,7 +5,6 @@ Game of thrones characters lookup using custom REST API created using express an
 ## Live Website
 
 View online - [game-of-thrones-characters](https://game-of-thrones-characters.pages.dev)
-<a href="https://game-of-thrones-characters.pages.dev" _target="blank"> view online</a>
 
 ## REST API
 
