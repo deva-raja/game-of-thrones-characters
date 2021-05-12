@@ -2,6 +2,10 @@
 
 Game of thrones characters lookup using custom REST API created using express and mongodb atlas
 
+## Live Website
+
+View online - [game-of-thrones-characters](https://game-of-thrones-characters.pages.dev)
+
 ## REST API
 
 View the api here - [got-characters](https://got-api-vinu.herokuapp.com/api/got/?name=all)
