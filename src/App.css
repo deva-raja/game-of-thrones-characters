@@ -128,9 +128,9 @@ input[type='text'] {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-header img {
-  width: 400px;
-}
+  header img {
+    width: 400px;
+  }
 }
 
 @media (max-width: 500px) {
